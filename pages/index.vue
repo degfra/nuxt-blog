@@ -4,7 +4,7 @@
       <h1>Get the latest tech news!</h1>
     </section>
     <section class="featured-posts">
-      <nuxt-link :to="'/posts/' + 1"  class="post-preview">
+      <!-- <nuxt-link :to="'/posts/' + 1"  class="post-preview">
         <article>
           <div class="post-thumbnail" style="background-image: url('http://www.nunnovation.com/wp-content/uploads/2017/09/Tech-Trends-770x300.png')"></div>
           <div class="post-content">
@@ -21,19 +21,42 @@
             <p>Preview Text 2</p>
           </div>
         </article>   
-      </nuxt-link>
+      </nuxt-link> -->
+
+      <PostPreview
+        id="1"
+        thumbnail="http://www.nunnovation.com/wp-content/uploads/2017/09/Tech-Trends-770x300.png"
+        title="Hello there!"
+        previewText="This is my first post." />
+      <PostPreview
+        id="2"
+        thumbnail="https://orig00.deviantart.net/a8f5/f/2010/204/2/8/abstract_circle_wallpaper_by_tennsoccerdr.jpg"
+        title="Hi there!"
+        previewText="This is my second post." />
+      <PostPreview
+        id="3"
+        thumbnail="https://hdwallsource.com/img/2014/7/cool-high-tech-wallpaper-30878-31608-hd-wallpapers.jpg"
+        title="Hi techies!"
+        previewText="This is my third post." />
+
     </section>
   </div>
 </template>
 
 <script>
+  import PostPreview from '@/components/posts/PostPreview'
 
+  export default {
+    components: {
+      PostPreview
+    }
+  }
 </script>
 
 <style scoped>
 
 .intro {
-  height: 300px;
+  height: 100px;
   position: relative;
   padding: 30px;
   box-sizing: border-box;
@@ -71,7 +94,7 @@
   justify-content: center;
 }
 
-.post-preview {
+/* .post-preview {
   border: 1px solid #ccc;
   box-shadow: 0 2px 2px #ccc;
   background-color: white;
@@ -100,7 +123,7 @@ a {
 .post-content {
   padding: 10px;
   text-align: center;
-}
+} */
 
 a:hover .post-content,
 a:active .post-content {

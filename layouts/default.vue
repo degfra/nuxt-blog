@@ -5,7 +5,7 @@
 </template>
 
 <style>
-html
+/* html
 {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
@@ -49,5 +49,14 @@ html
 {
   color: #fff;
   background-color: #35495e;
+} */
+
+html {
+  font-family: 'Open Sans', sans-serif;
 }
+
+body {
+  margin: 0;
+}
+
 </style>
